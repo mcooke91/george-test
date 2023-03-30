@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: terraform-aws-mwctest
+  title: Aws Terraform  Mwctest
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  description: Terraform module to create an Aws Terraform  Mwctest.
+  tags:
+    - terraform
+    - aws
+spec:
+  type: terraform-module
+  lifecycle: scaffolded
+  owner: group:default/internal-cloud-platform
+  definition: |
+      openapi: "3.0.0"
+      info:
+        version: 1.0.0
+        title: Artist API
+        license:
+          name: MIT

@@ -1,0 +1,22 @@
+sort:
+  enabled: true
+  by: name
+
+header-from: ./main.tf
+
+content: |-
+  {{ .Content }}
+  {{ .Resources }}
+  {{ .Inputs }}
+  {{ .Outputs }}
+
+sections:
+  hide: [modules]
+
+output:
+  file: "README.md"
+  mode: inject
+  template: |-
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_TF_DOCS -->

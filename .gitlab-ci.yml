@@ -1,0 +1,27 @@
+include:
+  - template: Terraform/Base.gitlab-ci.yml
+  - template: Jobs/SAST-IaC.gitlab-ci.yml
+  - project: 'synechron-code/cloud-devops/templates/pipeline-templates'
+    ref: v1.1.0
+    file:
+      - /templates/jobs/.terraform-docs.yaml
+      - /templates/jobs/.terraform-publish.yaml
+      - /templates/jobs/.backstage-publish-docs.yaml
+
+
+variables:
+  TERRAFORM_MODULE_SYSTEM: aws
+
+stages:
+  - validate
+  - test
+  - upload
+  - document
+
+fmt:
+  extends: .terraform:fmt
+  needs: []
+
+validate:
+  extends: .terraform:validate
+  needs: []
