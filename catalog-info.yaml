@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: terraform-aws-mwctest
+  name: terraform-aws-mwctest-3
   title: Aws Terraform  Mwctest
   annotations:
     backstage.io/techdocs-ref: dir:.
