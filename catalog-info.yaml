@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: george-test
-  title: george-test
+  name: terraform-aws-mwctest-3
+  title: terraform-aws-mwctest-3
   annotations:
     backstage.io/techdocs-ref: dir:.
   description: Terraform module to create an Aws Terraform  Mwctest.
